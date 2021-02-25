@@ -1,0 +1,4 @@
+Apex install disable check for CUDA version - https://github.com/NVIDIA/apex/issues/988
+
+venv37\Scripts\jupyter-lab.exe
+Same for tensorboard while training

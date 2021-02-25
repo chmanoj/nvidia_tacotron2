@@ -1,0 +1,11 @@
+venv/
+venv64/
+venv37/
+.idea/
+apex-master/
+DUMMY/
+model_checkpoints/
+pretrained/
+.ipynb_checkpoints/
+apex-master/
+mel_spectrograms/

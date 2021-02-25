@@ -254,12 +254,19 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
 
             iteration += 1
 
+    checkpoint_path = os.path.join(
+        output_directory, "checkpoint_final_{}".format(iteration))
+    save_checkpoint(model, optimizer, learning_rate, iteration,
+                    checkpoint_path)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-o', '--output_directory', type=str,
+                        default='model_checkpoints',
                         help='directory to save checkpoints')
     parser.add_argument('-l', '--log_directory', type=str,
+                        default='logs_tacotron2',
                         help='directory to save tensorboard logs')
     parser.add_argument('-c', '--checkpoint_path', type=str, default=None,
                         required=False, help='checkpoint path')
